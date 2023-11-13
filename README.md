@@ -1,6 +1,6 @@
-# Laravel 7 電子商務商品詳情
+# Laravel 10 電子商務商品詳情
 
-在從你的電子商務網站直接銷售各種商品時，有多種彈性的選項可供選擇，可完全依據你的需求自訂。Laravel 7 電子商務商品詳情主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
+在從你的電子商務網站直接銷售各種商品時，有多種彈性的選項可供選擇，可完全依據你的需求自訂。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -20,14 +20,22 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
+```sh
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以經由 `/login` 來進行登入，預社的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
+- 你可以經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/snjbBf5.png)
+![](https://i.imgur.com/IxLyZBS.png)
 > 所有商品都會指派為其中一個商品分類。提供完善貼切的名稱和說明，以及準確的價格、品牌和全球交易品項識別碼資訊，將有助於確保你的商品歸到正確的分類
 
-![](https://i.imgur.com/bJiko14.png)
+![](https://i.imgur.com/Fj1Ix7f.png)
 > 製作商品的精美介紹，讓大家知道這款爆款商品有多好，或是有多少口碑推薦

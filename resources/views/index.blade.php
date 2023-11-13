@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('content')
         <div class="col-lg-3">
@@ -15,31 +15,31 @@
 
         <div class="col-lg-9">
 
-            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
+            <div id="carouselExampleIndicators" class="carousel slide my-4" data-bs-ride="true">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></li>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></li>
+                </div>
+                <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+                        <img class="d-block w-100" src="http://placehold.it/900x350" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+                        <img class="d-block w-100" src="http://placehold.it/900x350" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+                        <img class="d-block w-100" src="http://placehold.it/900x350" alt="Third slide">
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">{{ trans('pagination.previous') }}</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="visually-hidden">{{ trans('shop.previous') }}</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">{{ trans('pagination.next') }}</span>
-                </a>
+                    <span class="visually-hidden">{{ trans('shop.next') }}</span>
+                </button>
             </div>
 
             <div class="row">
