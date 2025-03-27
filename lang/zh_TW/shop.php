@@ -16,10 +16,6 @@ return [
     'edit'         => '編輯',
     'save'         => '儲存',
     'update'       => '更新',
-    'home' => [
-	    'dashboard' => '儀表板',
-        'message'   => '你已經登入！',
-    ],
     'menu'  => [
         'home'       => '首頁',
         'about'      => '關於',

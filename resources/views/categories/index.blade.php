@@ -23,7 +23,7 @@
                             <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display: inline">
                                 @method('DELETE')
                                 @csrf
-                                <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('{{ trans('shop.are_you_sure') }}')" />
+                                <input type="submit" value="{{ trans('shop.delete') }}" class="btn btn-danger" onclick="return confirm('{{ trans('shop.are_you_sure') }}')" />
                             </form>
                         </td>
                     </tr>

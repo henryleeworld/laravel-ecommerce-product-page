@@ -1,4 +1,4 @@
-# Laravel 10 電子商務商品詳情
+# Laravel 11 電子商務商品詳情
 
 在從你的電子商務網站直接銷售各種商品時，有多種彈性的選項可供選擇，可完全依據你的需求自訂。
 
@@ -34,8 +34,8 @@ $ npm run build
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/IxLyZBS.png)
+![](https://i.imgur.com/vsFudCw.png)
 > 所有商品都會指派為其中一個商品分類。提供完善貼切的名稱和說明，以及準確的價格、品牌和全球交易品項識別碼資訊，將有助於確保你的商品歸到正確的分類
 
-![](https://i.imgur.com/Fj1Ix7f.png)
+![](https://i.imgur.com/og65RvC.png)
 > 製作商品的精美介紹，讓大家知道這款爆款商品有多好，或是有多少口碑推薦

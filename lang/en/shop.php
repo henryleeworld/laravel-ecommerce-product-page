@@ -16,10 +16,6 @@ return [
     'edit'         => 'Edit',
     'save'         => 'Save',
     'update'       => 'Update',
-    'home' => [
-	    'dashboard' => 'Dashboard',
-        'message'   => 'You are logged in!',
-    ],
     'menu'  => [
         'home'       => 'Home',
         'about'      => 'About',

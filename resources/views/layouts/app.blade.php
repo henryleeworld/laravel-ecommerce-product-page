@@ -1,55 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ trans('shop.title') }}</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        @vite(['resources/sass/app.scss'])
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Custom styles for this template -->
-        <link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet" />
-    </head>
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    @vite(['resources/sass/app.scss'])
+    <!-- Custom styles for this template -->
+    <link href="{{ asset('css/shop-homepage.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <div id="app" class="d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ trans('shop.menu.home') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <body>
-        <div id="app" class="d-flex flex-column min-vh-100">
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
-                <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ trans('shop.menu.home') }}
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav me-auto">
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav me-auto"></ul>
+                    </ul>
 
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('about') }}">{{ trans('shop.menu.about') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('services') }}">{{ trans('shop.menu.services') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('contact') }}">{{ trans('shop.menu.contact') }}</a>
-                            </li>
-                            <!-- Authentication Links -->
-                            @guest @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ trans('shop.menu.login') }}</a>
-                            </li>
-                            @endif @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            </li>
-                            @endif @else
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('about') }}">{{ trans('shop.menu.about') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('services') }}">{{ trans('shop.menu.services') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('contact') }}">{{ trans('shop.menu.contact') }}</a>
+                        </li>
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('products.index') }}">{{ trans('shop.menu.products') }}</a>
                             </li>
@@ -62,7 +70,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
@@ -71,25 +81,26 @@
                                     </form>
                                 </div>
                             </li>
-                            @endguest
-                        </ul>
-                    </div>
+                        @endguest
+                    </ul>
                 </div>
-            </nav>
-            <main class="py-4">
-                <div class="container">
-                    @yield('content')
-                </div>
-            </main>
-            <!-- Footer -->
-            <footer class="mt-auto py-5 bg-dark">
-                <div class="container">
-                    <p class="m-0 text-center text-white">{!! trans('shop.copyright') !!}</p>
-                </div>
-                <!-- /.container -->
-            </footer>
-        </div>
-        <!-- Scripts -->
-        @vite(['resources/js/app.js'])
-    </body>
+            </div>
+        </nav>
+
+        <main class="py-4">
+            <div class="container">
+                @yield('content')
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="mt-auto py-5 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">{!! trans('shop.copyright') !!}</p>
+            </div>
+            <!-- /.container -->
+        </footer>
+    </div>
+    <!-- Scripts -->
+    @vite(['resources/js/app.js'])
+</body>
 </html>

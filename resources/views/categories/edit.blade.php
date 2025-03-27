@@ -9,7 +9,7 @@
             @method('PUT')
             @csrf
 
-            Name:
+            {{ trans('shop.category.name') }}
             <br />
             <input type="text" name="name" value="{{ $category->name }}" class="form-control" />
 
