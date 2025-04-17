@@ -23,13 +23,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="http://placehold.it/900x350" alt="First slide">
+                        <img class="d-block w-100" src="https://dummyimage.com/900x350" alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="http://placehold.it/900x350" alt="Second slide">
+                        <img class="d-block w-100" src="https://dummyimage.com/900x350" alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="http://placehold.it/900x350" alt="Third slide">
+                        <img class="d-block w-100" src="https://dummyimage.com/900x350" alt="Third slide">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -55,7 +55,7 @@
                             <h5>${{ $product->price }}</h5>
                             <p class="card-text">{{ $product->description }}</p>
                             <hr />
-                            Category: {{ $product->category->name }}
+                            {{ trans('shop.product.category') . ' ' . $product->category->name }}
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>

@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/home');
 Auth::routes();
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', function () {
     return view('about');

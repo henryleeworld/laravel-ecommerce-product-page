@@ -57,5 +57,5 @@ return [
 	    'title'   => '關於我們',
         'content' => '關於我們內容...',
     ],
-    'copyright' => '版權所有 &copy; 你的網站 2020',
+    'copyright' => '版權所有 &copy; 你的網站 2025',
 ];
