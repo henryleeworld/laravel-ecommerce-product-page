@@ -57,5 +57,5 @@ return [
 	    'title'   => 'About us',
         'content' => 'About us text...',
     ],
-    'copyright' => 'Copyright &copy; Your Website 2025',
+    'copyright' => 'Copyright &copy; Your Website 2026',
 ];

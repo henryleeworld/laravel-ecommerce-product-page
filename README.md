@@ -1,4 +1,4 @@
-# Laravel 12 電子商務商品詳情
+# Laravel 13 電子商務商品詳情
 
 在從你的電子商務網站直接銷售各種商品時，有多種彈性的選項可供選擇，可完全依據你的需求自訂。
 
@@ -16,9 +16,9 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
 ```sh
-$ php artisan migrate --seed
+$ php artisan migrate
 ```
 - 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
@@ -29,13 +29,14 @@ $ npm install
 $ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
-- 你可以經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
+- 你可以經由 `/register` 來進行註冊。
+- 完成註冊後，可以經由 `/login` 來進行登入。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/XDw2CBj.png)
+![](https://i.imgur.com/SjU9PEo.png)
 > 所有商品都會指派為其中一個商品分類。提供完善貼切的名稱和說明，以及準確的價格、品牌和全球交易品項識別碼資訊，將有助於確保你的商品歸到正確的分類
 
-![](https://i.imgur.com/cTLVFpY.png)
+![](https://i.imgur.com/ohK9enl.png)
 > 製作商品的精美介紹，讓大家知道這款爆款商品有多好，或是有多少口碑推薦
